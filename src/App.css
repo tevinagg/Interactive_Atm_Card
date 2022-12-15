@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Space Grotesk', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-div{
+    height: 100vh;
+    display: flex;
+}
+.first-container{
+    width: 50%;
+    display: flex;
+}
+.second-container{
+    width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-desk-img{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-input{
+    width: 50%;
+}
+.form-controls{
+    margin-top: 15rem;
+}
+.form-button{
+    width: 27.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.inputs{
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-front{
+    height: 200px;
+    width: 400px;
+    background-position: center;
+    background-size: cover;
+    margin-top: 10rem;
+    margin-left: -20rem;
+    border-radius: 1rem;
 }
+
+.card-back{
+    height: 200px;
+    width: 400px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-left: -12rem;
+}
+
+.card-logo{
+    padding: 1.5rem;
+}
+
+.card-number{
+    margin-top: 1.5rem;
+    margin-left: 1.8rem;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+
+}
+.card-name{
+    margin-left: 1.5rem;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+.span-date{
+    margin-left: 12rem;
+}
+.cvc-input{
+    color: white;
+    padding: 6.1rem 23rem;
+    font-size: 18px;
+}
+
+#complete-logo{
+    margin-top: 15rem;
+    margin-left: 10rem;
+}
+
+.h1-head{
+    font-size: 25px;
+    letter-spacing: 0.2rem;
+    margin-left: 6rem;
+    padding-bottom: 0.5rem;
+}
+
+#small-text{
+    padding-top: 1rem;
+    font-size: 16px;
+    display: block;
+    margin-left: -1.5rem;
+}
+
+.form-submit{
+    width: 27.5rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
