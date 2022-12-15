@@ -1,12 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {setCardName} from "../redux/features/cardName";
-import {setCardNumber} from "../redux/features/cardNumber";
-import {setCardMonth} from "../redux/features/cardMonth";
-import {setCardYear} from "../redux/features/cardYear";
-import {setCardCvc} from "../redux/features/cardCvc";
-
+import {setCard} from "../redux/features/card";
 
 
 function Form({name, setName, number, setNumber, month, setMonth, year, setYear, cvc, setCvc }) {
@@ -18,11 +13,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
     const onFormSubmit = (e) => {
         e.preventDefault()
         navigate("/submit", {replace: true})
-        dispatch(setCardName(name))
-        dispatch(setCardNumber(number))
-        dispatch(setCardMonth(month))
-        dispatch(setCardYear(year))
-        dispatch(setCardCvc(cvc))
+        dispatch(setCard({cardName: name, cardNumber: number, cardYear: year, cardMonth: month, cardCvc: cvc}))
     }
 
     const onKeyUpSelect = (e) => {
@@ -44,6 +35,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                       name="names"
                       placeholder="e.g Jane Appleseed"
                       value={name}
+                      required
                   />
               </div>
               <div className="eight wide field">
@@ -59,7 +51,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                       minLength="19"
                       maxLength="19"
                       value={number}
-                      // required
+                      required
                   />
               </div>
               <div className="fields">
@@ -75,6 +67,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                                   maxLength="2"
                                   placeholder="MM"
                                   value={month}
+                                  required
                               />
                           </div>
                           <div className="field">
@@ -86,6 +79,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                                   maxLength="2"
                                   placeholder="YY"
                                   value={year}
+                                  required
                               />
                           </div>
                       </div>
@@ -101,6 +95,7 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                           maxLength="3"
                           placeholder="e.g 123"
                           value={cvc}
+                          required
                       />
                   </div>
               </div>

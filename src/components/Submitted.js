@@ -30,8 +30,6 @@ function Submitted() {
                 <form className="ui form form-submit" onSubmit={onFormSubmit}>
                     <button type={"submit"} className="large ui black button form-button">Continue</button>
                 </form>
-
-
             </div>
 
         </div>

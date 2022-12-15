@@ -7,21 +7,17 @@ import cardBack from "../images/bg-card-back.png";
 
 function CardSubmitted() {
 
-    const cardName = useSelector((state) => state.name.cardName);
-    const cardNumber = useSelector((state) => state.number.cardNumber);
-    const cardMonth = useSelector((state) => state.month.cardMonth);
-    const cardYear = useSelector((state) => state.year.cardYear);
-    const cardCvc = useSelector((state) => state.cvc.cardCvc);
+    const card = useSelector((state) => state.card.value)
 
     return(
         <div>
             <div style={{backgroundImage: `url(${cardFront})`}} className="card-front">
                 <img src={cardLogo} alt="card logo" className="card-logo"/>
-                <p className="card-number">{cardNumber}</p>
-                <p className="card-name">{cardName} <span className="span-date">{cardMonth}/{cardYear}</span></p>
+                <p className="card-number">{card.cardNumber}</p>
+                <p className="card-name">{card.cardName} <span className="span-date">{card.cardMonth}/{card.cardYear}</span></p>
             </div>
             <div style={{backgroundImage: `url(${cardBack})`}} className="card-back">
-                <p className="cvc-input">{cardCvc}</p>
+                <p className="cvc-input">{card.cardCvc}</p>
             </div>
         </div>
     )
