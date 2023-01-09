@@ -76,8 +76,8 @@ function Form({name, setName, number, setNumber, month, setMonth, year, setYear,
                                   onChange={(e) => setYear(e.target.value)} className="inputs"
                                   pattern="[0-9]*"
                                   name="year"
-                                  minLength="2"
                                   maxLength="2"
+                                  minLength="2"
                                   placeholder="YY"
                                   value={year}
                                   required
